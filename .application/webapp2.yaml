@@ -20,3 +20,11 @@ spec:
     automated:
       selfHeal: true
       prune: true
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jsonPointers:
+      - /spec/replicas
+      - /spec/template/spec/containers/image
+      - /spec/template/metadata/labels/version_api
+      - /spec/template/metadata/labels/version_nginx

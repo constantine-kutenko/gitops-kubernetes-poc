@@ -4,7 +4,7 @@ metadata:
   name: webapp2
   namespace: qa1
 spec:
-  replicas: 1
+  replicas: 5
   revisionHistoryLimit: 1
   selector:
     matchLabels:
