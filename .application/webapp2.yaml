@@ -21,10 +21,10 @@ spec:
       selfHeal: true
       prune: true
   ignoreDifferences:
-  - group: apps
+  - group: ""
     kind: Deployment
     jsonPointers:
-      - /spec/replicas
-      - /spec/template/spec/containers/image
-      - /spec/template/metadata/labels/version_api
-      - /spec/template/metadata/labels/version_nginx
+    - /spec/replicas
+    - /spec/template/spec/containers/image
+    - /spec/template/metadata/labels/version_api
+    - /spec/template/metadata/labels/version_nginx
