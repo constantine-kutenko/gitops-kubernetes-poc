@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: webapp-headless
+  namespace: stage1
   labels:
     app: webapp
 spec:
