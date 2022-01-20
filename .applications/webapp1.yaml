@@ -21,11 +21,8 @@ spec:
       selfHeal: true
       prune: true
   ignoreDifferences:
-  - group: ""
+  - group: apps
     kind: Deployment
     name: webapp1
     jsonPointers:
     - /spec/replicas
-    - /spec/template/spec/containers/image
-    - /spec/template/metadata/labels/version_api
-    - /spec/template/metadata/labels/version_nginx

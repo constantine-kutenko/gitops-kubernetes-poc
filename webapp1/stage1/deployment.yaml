@@ -19,3 +19,6 @@ spec:
         name: webapp
         ports:
         - containerPort: 80
+        env:
+          - name: ENV
+            value: development
