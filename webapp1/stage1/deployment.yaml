@@ -4,7 +4,7 @@ metadata:
   name: webapp1
   namespace: stage1
 spec:
-  replicas: 3
+  # replicas: 3
   revisionHistoryLimit: 3
   selector:
     matchLabels:

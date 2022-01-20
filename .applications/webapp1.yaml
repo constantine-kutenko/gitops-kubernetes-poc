@@ -21,8 +21,9 @@ spec:
       selfHeal: true
       prune: true
   ignoreDifferences:
-  - group: apps
-    kind: Deployment
-    name: webapp1
-    jsonPointers:
-    - /spec/replicas
+    - group: apps
+      kind: Deployment
+    # name: webapp1
+      jsonPointers:
+        - /spec/replicas
+        - /replicas
