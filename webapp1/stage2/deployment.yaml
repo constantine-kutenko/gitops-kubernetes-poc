@@ -1,10 +1,11 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapp1
   namespace: stage2
 spec:
-  replicas: 3
+  # replicas: 3
   revisionHistoryLimit: 3
   selector:
     matchLabels:
