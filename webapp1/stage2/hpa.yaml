@@ -2,7 +2,8 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  annotations: {}
+  annotations:
+    argocd.argoproj.io/synchronization: Exclude
   name: webapp1
   namespace: stage2
 spec:
