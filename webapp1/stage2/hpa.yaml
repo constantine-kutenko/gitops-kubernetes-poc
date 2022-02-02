@@ -3,7 +3,7 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   annotations:
-    argocd.argoproj.io/synchronization: Exclude
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: webapp1
   namespace: stage2
 spec:
