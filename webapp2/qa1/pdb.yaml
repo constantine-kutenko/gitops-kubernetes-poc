@@ -1,0 +1,12 @@
+---
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: webapp2
+  namespace: qa1
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: webapp2
+

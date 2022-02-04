@@ -1,0 +1,14 @@
+---
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: webapp2
+  namespace: qa2
+spec:
+  maxReplicas: 3
+  minReplicas: 3
+  scaleTargetRef:
+    apiVersion: apps/v1beta1
+    kind: Deployment
+    name: webapp2
+
