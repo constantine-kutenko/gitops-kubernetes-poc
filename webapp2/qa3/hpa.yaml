@@ -10,7 +10,7 @@ spec:
   - resource:
       name: cpu
       target:
-        averageUtilization: 100
+        averageUtilization: 90
         type: Utilization
     type: Resource
   minReplicas: 4
@@ -18,4 +18,3 @@ spec:
     apiVersion: apps/v1beta1
     kind: Deployment
     name: webapp2
-
