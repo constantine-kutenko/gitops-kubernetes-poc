@@ -2,14 +2,19 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  annotations: {}
   name: testwebapp1
   namespace: stage2
 spec:
   maxReplicas: 6
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 90
+        type: Utilization
+    type: Resource
   minReplicas: 2
   scaleTargetRef:
     apiVersion: apps/v1beta1
     kind: Deployment
     name: testwebapp1
-  targetCPUUtilizationPercentage: 5
