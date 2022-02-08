@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testwebapp1
+  namespace: stage2
+spec:
+  # This was commented out intentionally to allow ArgoCD not to sync it with the repo.
+  # By default, if the munber of replicas is not specified explicitly, at least one replica
+  # gets created. The HPA definition can alter this behaviour and the minimin number of
+  # replicas equal to that specified in spec.minReplicas field.
+  # replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: testwebapp1
+  template:
+    metadata:
+      labels:
+        app: testwebapp1
+    spec:
+      containers:
+      - image: nginx:1.20.2-alpine
+        name: webapp
+        ports:
+        - containerPort: 80

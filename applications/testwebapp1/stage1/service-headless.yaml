@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: testwebapp1-headless
+  namespace: stage1
+  labels:
+    app: testwebapp1
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+  clusterIP: None
+  selector:
+    app: testwebapp1

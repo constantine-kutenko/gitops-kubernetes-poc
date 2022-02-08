@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testwebapp1
+  namespace: stage1
+spec:
+  # replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: testwebapp1
+  template:
+    metadata:
+      labels:
+        app: testwebapp1
+    spec:
+      containers:
+      - image: nginx:1.20.2-alpine
+        name: webapp
+        ports:
+        - containerPort: 80
+        env:
+          - name: ENV
+            value: development
