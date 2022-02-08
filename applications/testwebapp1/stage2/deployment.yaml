@@ -24,3 +24,10 @@ spec:
         name: webapp
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
+          requests:
+            cpu: 10m
+            memory: 8Mi
