@@ -14,8 +14,6 @@ spec:
     metadata:
       labels:
         app: webapp2
-        tier: demo
-        version_webapp2: master.422
     spec:
       containers:
       - image: nginx:1.20.2-alpine
